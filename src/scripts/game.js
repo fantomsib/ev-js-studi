@@ -151,7 +151,7 @@ function game() {
         }
         //if(playerIsActive === 0) {
         gameScoreTotal[playerIsActive].textContent -= -currentPlayer[playerIsActive].textContent;
-        if (gameScoreTotal[playerIsActive].textContent >= 10) {
+        if (gameScoreTotal[playerIsActive].textContent >= 100) {
             alert(`win Player ${playerIsActive + 1}`);
             gameOver = true;
             return 0;

@@ -74,7 +74,7 @@
   align-items: center;
   &::before {
     content: "";
-    background: url("../images/icons/cross.png");
+    background: url("./../images/icons/cross.png");
     background-size: 100%;
     transform: rotate(45deg);
     display: flex;
@@ -94,8 +94,35 @@
   flex-direction: column;
   align-items: center;
 }
+
+.hold {
+  display: flex;
+
+  &::before {
+    content: "";
+    background: url("./../images/down.png");
+    background-size: 100%;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+}
+
 .roll-dice {
   margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    background: url("./../images/rotate.png");
+    background-size: 100%;
+
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
 }
 
 .game-cube {

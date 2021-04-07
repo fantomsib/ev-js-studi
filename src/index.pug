@@ -1,0 +1,349 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+    title Game | main page
+  body
+    .wrapper
+      section.section
+        .container
+
+          .game
+
+            .gamer-block.gamer-left
+              h1.gamer__title  PLAYER 1
+              .gamer-score.gamer-score__1  0
+              .gamer-current.gamer-current__1
+                .current-title CURRENT
+                .current-score.current-score__gamer-1 0
+            .game-option
+              a.new-game NEW GAME
+              .game-cube
+                //cube Number 1
+                .cube-number.cube-number-1
+                  .cube-ligne__2
+                    .dot-items.dot-number__3
+                //cube Number 2
+                .cube-number.cube-number-2
+                  .cube-ligne__1
+                    .dot-items.dot-number__2 
+                  .cube-ligne__3
+                    .dot-items.dot-number__4
+                //cube Number 3
+                .cube-number.cube-number-3
+                  .cube-ligne__1
+                    .dot-items.dot-number__2 
+                  .cube-ligne__2
+                    .dot-items.dot-number__3
+                  .cube-ligne__3
+                    .dot-items.dot-number__4
+                //cube Number 4
+                .cube-number.cube-number-4
+                  .cube-ligne__1
+                    .dot-items.dot-number__1 
+                    .dot-items.dot-number__2 
+                  .cube-ligne__3
+                    .dot-items.dot-number__4
+                    .dot-items.dot-number__5 
+                //cube Number 5    
+                .cube-number.cube-number-5
+                  .cube-ligne__1
+                    .dot-items.dot-number__1 
+                    .dot-items.dot-number__2 
+                  .cube-ligne__2
+                    .dot-items.dot-number__3
+                  .cube-ligne__3
+                    .dot-items.dot-number__4
+                    .dot-items.dot-number__5
+                //cube Number 6
+                .cube-number.cube-number-6
+                  .cube-ligne__1.cube-ligne__1-numero-6
+                    .dot-items.dot-number__1 
+                    .dot-items.dot-number__2 
+                    .dot-items.dot-number__5 
+                  .cube-ligne__3.cube-ligne__1-numero-6
+                    .dot-items.dot-number__4
+                    .dot-items.dot-number__5 
+                    .dot-items.dot-number__5       
+
+                //- - 
+                //-   let dotList = [
+                //-     {dot: ""},
+                //-     {dot: ""},
+                //-     {dot: ""},
+                //-     {dot: ""},
+                //-     {dot: ""},
+                //-   ];
+                //- ul.cube-dot__list
+                //-   each items in dotList
+                //-     li.dot-items #{items.dot}
+              .option-score
+                a.roll-dice ROLL DICE
+                a.hold HOLD
+            .gamer-block.gamer-right
+              h1.gamer__title  PLAYER 2
+              .gamer-score.gamer-score__2  0
+              .gamer-current.gamer-current__2
+                .current-title CURRENT
+                .current-score.current-score__gamer-2 0
+
+
+      //-     .welcome-main
+      //-       header.header
+      //-         .header-logo
+      //-           .header-logo__text <span class="header-logo__premierLettre">S</span>mart
+      //-         .hamburger-menu
+      //-           <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+      //-             <path class="line top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+      //-             <path class="line middle" d="m 30,50 h 40" />
+      //-             <path class="line bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+      //-           </svg>
+      //-       .welcome-content
+      //-         .welcome-content__text
+      //-           h1.title.welcome-content__title <span class="title__premierMot">Smart</span> Agency Landign Page
+      //-           .welcome-content__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, fuga provident. Libero magni quibusdam labore ad iste saepe hic, maxime qui ipsum tempore beatae, volu tomi ptates doloremque rerum aspernatur dolorum at!       
+      //-       .welcome-message
+      //-         form.form-welcome
+      //-           .title.form-title  <span class="title__premierMot">Send</span> A Message
+      //-           input(type='text' placeholder="Your Name").form-input.form-welcome__name
+      //-           input(type='text' placeholder="Your Name").form-input.form-welcome__email
+      //-           textarea(for='#' placeholder="Your Message").form-input.form-welcome__textarea
+      //-           button(type='submit' id="btnFormWelcome").form-welcome__button Send Message
+      //- section.section.working-section
+      //-   .container.container-working
+      //-     .working-main
+      //-       .section-header__block-text.working-text__header
+      //-         h1.title.title-working <span class="title__premierMot">Working</span> Process
+      //-         .section-header__desc.working-desc Lorem ipsum dolor sit amet consectet ur adipiscing elit  Vestibulum bibend um vestibulum.
+      //-       .working-content
+      //-         - 
+      //-           let workingList =[{
+      //-             icon: "magnet.png",
+      //-             title: "Koc Koi Tomi",
+      //-             text: "Lorem ipsum is dummy lorem very dumy"
+      //-           },
+      //-           {
+      //-             icon: "bug.png",
+      //-             title: "Koimona Set",
+      //-             text: "Lorem ipsum is dummy you   lorem very dumyL is"
+      //-           },
+      //-           {
+      //-             icon: "works-gear.png",
+      //-             title: "Setting Koire",
+      //-             text: "Lorem ipsum is dummy lorem very yLorem ipsus "
+      //-           },
+      //-           {
+      //-             icon: "camera.png",
+      //-             title: "Ko Image Lara",
+      //-             text: "Lorem ipsum is dummy ry dumyLorem ipsum is"
+      //-           },
+
+
+
+      //-           ]
+      //-         ul.working-list
+      //-           each item in workingList
+      //-             li.working-item
+      //-               +image(item.icon, "working-icon") 
+      //-               .working-item__title #{item.title}
+      //-               .working-text #{item.text}
+      //-               .work-items__link
+      //-                 a(href="#").work-item__link-text Know More
+      //- section.section.featured-works
+      //-   .container.container-featured__works
+      //-     .featured-works__main
+      //-       .featured-works__text
+      //-         h1.title.featured-works__title <span class="title__premierMot">Featured</span> Works
+      //-         .featured-works__desc Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero. 
+      //-       .featured-works__list
+      //-         - 
+      //-           let futuredWorks =[{
+      //-             title: "Futured Works"
+      //-           },
+      //-           {
+      //-             title: "Futured Works"
+      //-           },
+      //-           {
+      //-             title: "Futured Works"
+      //-           },
+      //-           {
+      //-             title: "Futured Works"
+      //-           },
+      //-           {
+      //-             title: "Futured Works"
+      //-           },
+      //-           {
+      //-             title: "Futured Works"
+      //-           },
+      //-           {
+      //-             title: "Futured Works"
+      //-           },
+      //-           {
+      //-             title: "Futured Works"
+      //-           },
+      //-           {
+      //-             title: "Futured Works"
+      //-           },
+      //-           ]
+      //-         ul.works__slides
+      //-           each items in futuredWorks
+      //-             li.works__slide__item
+      //-               .works__islide__title #{items.title}
+      //- section.section.services-section
+      //-   .container
+      //-     .services-main
+      //-       .services-header__text
+      //-         h1.title.services-title <span class="title__premierMot">Services</span> We Provide
+      //-         .services-desc  Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.             
+      //-       .services-contnet
+      //-         .service-content__images
+      //-           - let serviceIcons = ["schedule.png", "gear.png", "search.png", "schedule.png"];
+      //-             ul.services-images__list
+      //-               each icon in serviceIcons
+      //-                 li.services-images__item
+      //-                   +image(icon).service-icon 
+      //-         .services-content__desc
+      //-           .services-content__title Modern App Design
+      //-           .services-content__text
+      //-             p.text-para Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus earum totam ad sint error porro. Consectetur, sunt, aperiam. Magni rem optio distinctio illum consequuntur delectus nulla illo aperiam itaque cumque.
+      //-             p.text-para Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officia vitae eveniet quam rem unde facilis.
+      //-             p.text-para vitae eveniet quam rem unde facilis.
+      //-           .services-content__know
+      //-             a.services-content__link Know More
+      //-         .service-content__watch
+      //-           +image("apple-watch.png").watch-image
+      //- section.section.team
+      //-   .container.container-team
+      //-     .team-main
+      //-       .team-header__text
+      //-         h1.title.team-title <span class="title__premierMot">Team</span> Chinen & Skills
+      //-         .team-desc Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.
+      //-       .team-content
+      //-         - 
+      //-           let team = [
+      //-           {
+      //-             name: "Bedi Manos",
+      //-             post: "UI/UX Parena",
+      //-             skillProf: "UI/UX  Design",
+      //-             skillLangue: "French",
+      //-             skillPerso: "Communication",
+      //-             photo: "dev1.jpg"
+
+      //-           },
+      //-           {
+      //-             name: "Al Rayhan",
+      //-             post: "UI/UX Designer",
+      //-             skillProf: "UI/UX  Design",
+      //-             skillLangue: "English",
+      //-             skillPerso: "Communication",
+      //-             photo: "dev2.jpg"
+
+      //-           },
+      //-           {
+      //-             name: "Ali Sayed",
+      //-             post: "UI/UX Designer",
+      //-             skillProf: "UI/UX  Design",
+      //-             skillLangue: "English",
+      //-             skillPerso: "Communication",
+      //-             photo: "dev3.jpg"
+
+      //-           }
+      //-           ]
+
+
+      //-         - let socialIcon = ["twitter.png", "fb.png", "twitter.png"]
+      //-         ul.team-list
+      //-           each item in  team
+
+      //-             li.team-item
+
+      //-               +image(item.photo, "team-photo")
+      //-               .block-skills__name
+      //-                 .skills
+      //-                   .persson-skill #{item.skillProf}
+      //-                   .persson-skill #{item.skillLangue}
+      //-                   .persson-skill #{item.skillPerso}
+
+      //-                 .persson-block 
+      //-                   .persson-name #{item.name}
+      //-                   .persson-prof #{item.post}
+      //-                   .persson-social__icon
+      //-                     each iconSocial in socialIcon
+      //-                       +image(iconSocial, "social-icon")
+      //-               .team-blcok__name
+      //-                 .team-blcok__name-name #{item.name}
+      //-                 .team-blcok__name-prof #{item.post}  
+      //- section.section.clients
+      //-   .container
+      //-     .clients-main
+      //-       .clients-header__text
+      //-         .title.clients-title <span class="title__premierMot">Clients</span> Said 
+      //-         .clients-desc  Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.            
+      //-       .slider
+      //-         button.button-slider.btn-left  
+
+      //-         - 
+      //-           let clients = [
+      //-             {
+      //-               name: "Kita Say",
+      //-               post: "HK Director",
+      //-               avis: "“Enfin, on signe, et on ajoute son nom en lettre d’imprimerie en dessous de sa signature. Si la personne destinataire de la lettre ne vous connaît pas, on ajoute son statut marital entre parenthèses (Mr, Mrs, Ms, Miss)”",
+      //-               clientIcon: "profil3.png",
+      //-             },
+      //-             {
+      //-               name: "Al Rayhan",
+      //-               post: "UX Director",
+      //-               avis: "“Pour finir sa lettre, On emploie une formule de politesse telle que ” I am looking forward to hearing from you.” ou son équivalent au Présent Simple : “I look forward to hearing from you.”Si  la réponse attendue est urgente on peut ajouter l’une des formules suivantes :”",
+      //-               clientIcon: "profil2.jpg",
+      //-             },
+      //-             {
+      //-               name: "Bob Torrent",
+      //-               post: "UX Director",
+      //-               avis: "“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again ”",
+      //-               clientIcon: "profil3.png",
+      //-             }
+
+      //-             ]
+      //-         - let starIcon = ["star.png","star.png","star.png","star.png","star.png"] 
+      //-         //- let clientsPhoto = ["profil1.png", "profil2.jpg", "profil3.png"] 
+
+      //-         ul.slider-wrapper
+      //-           each client in clients
+      //-             li.clients-item
+      //-               .clients-photo
+
+      //-                   +image(client.clientIcon, 'clients-icon')
+      //-               .clients-avis #{client.avis}
+      //-               .star-list
+      //-                 each star in starIcon
+      //-                   +image(star, "star-icon")
+      //-               .clients-profil
+      //-                 .client-name #{client.name}
+      //-                 .client-post #{client.post}
+
+
+      //-         button.button-slider.btn-right  
+      //- section.client-partner
+      //-   .container
+      //-     - let partner = ["linkedIn.png", "dribbble.png", "envato.png", "linkedIn.png", "dribbble.png", "envato.png"]
+      //-       ul.partner-list
+      //-         each partnerName in partner
+      //-           li.partner-item
+      //-             +image(partnerName, 'partner-icon')
+      //- footer.footer
+      //-   .container
+      //-     .footer-main
+      //-       button.footer-button Contact user
+      //-       .footer-bottom
+      //-         - let socialIconFooter = ["faceBook.png", "twit.png", "glob.png", "be.png"]
+      //-           ul.social-list
+      //-             each iconSocial in socialIconFooter
+      //-               li.social-item
+      //-                 a.social-link__footer
+      //-                   +image(iconSocial, "icon-footer")
+      //-         .footer-copyrigt © 2015 - 2016 Deviserweb Ltd.          

@@ -1,0 +1,172 @@
+.section {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  border: 20px solid goldenrod;
+  width: 100%;
+  position: relative;
+}
+
+.game {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  //justify-content: space-between;
+}
+
+.gamer-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+.game-option {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+.gamer-left {
+  background-color: gainsboro;
+}
+
+.gamer-right {
+  background-color: tan;
+}
+
+.gamer__title {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+}
+.gamer-score {
+  font-size: 80px;
+  color: red;
+}
+.gamer-current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  padding: 20px 40px 20px 40px;
+  color: white;
+}
+.current-title {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+.current-score {
+  font-size: 35px;
+}
+
+.new-game {
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    background: url("../images/icons/cross.png");
+    background-size: 100%;
+    transform: rotate(45deg);
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+}
+
+.new-game,
+.roll-dice,
+.hold {
+  font-size: 30px;
+}
+.option-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.roll-dice {
+  margin-bottom: 35px;
+}
+
+.game-cube {
+  background-color: #ffffff;
+  width: 150px;
+  height: 150px;
+}
+
+.cube-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10%;
+  width: 100%;
+  height: 100%;
+}
+
+.cube-ligne__1,
+.cube-ligne__3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dot-items {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.cube-number-1 {
+  justify-content: center;
+  display: none;
+}
+.cube-number-3 {
+  .cube-ligne__1 {
+    justify-content: flex-end;
+  }
+  display: none;
+}
+.cube-number-2 {
+  .cube-ligne__1 {
+    justify-content: flex-end;
+  }
+  display: none;
+}
+.cube-number-4 {
+  display: none;
+}
+.cube-number-5 {
+  display: none;
+}
+.cube-number-6 {
+  transform: rotate(90deg);
+  display: none;
+}
+
+.dot-active {
+  display: flex;
+}
+
+.player-active {
+  &::after {
+    content: "";
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 30px;
+  }
+}

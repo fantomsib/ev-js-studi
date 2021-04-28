@@ -60,6 +60,9 @@
   font-size: 40px;
   display: flex;
   align-items: center;
+  @include tablets {
+    font-size: 30px;
+  }
 }
 .gamer-score {
   font-size: 80px;
@@ -72,6 +75,9 @@
   background-color: red;
   padding: 20px 40px 20px 40px;
   color: white;
+  @include tablets {
+    padding: 10px 20px 10px 20px;
+  }
 }
 .current-title {
   font-size: 20px;
@@ -101,6 +107,9 @@
 .roll-dice,
 .hold {
   font-size: 30px;
+  @include tablets {
+    font-size: 20px;
+  }
 }
 .option-score {
   display: flex;
@@ -142,6 +151,9 @@
   background-color: #ffffff;
   width: 150px;
   height: 150px;
+  @include tablets {
+    padding: 5px;
+  }
 }
 
 .cube-number {

@@ -13,7 +13,10 @@
   height: 100%;
   width: 100%;
   display: flex;
-  //justify-content: space-between;
+  @include tablets {
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .gamer-block {
@@ -22,6 +25,12 @@
   justify-content: space-around;
   align-items: center;
   width: 50%;
+  @include tablets {
+    width: 100%;
+    height: 50%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
 }
 .game-option {
   position: absolute;
@@ -33,6 +42,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
+  @include tablets {
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 .gamer-left {
